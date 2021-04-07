@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mycolor">
+
+    <TextView
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Res"
+        android:textSize="70sp"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="_RESERVE_"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/background"
+        android:layout_marginBottom="160dp"/>
+
+    <Button
+        android:id="@+id/goToWebsite"
+        style="@style/main_button"
+        android:text="WEBSITE"/>
+
+    <Button
+        android:id="@+id/goToReserve"
+        style="@style/main_button"
+        android:text="RESERVE"/>
+
+
+</LinearLayout>

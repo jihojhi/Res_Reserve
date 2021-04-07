@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Res_reserve</string>
+    <string name="timeList_prompt">LUNCH/DINNER</string>
+    <string-array name="timeList">
+        <item>LUNCH</item>
+        <item>DINNER</item>
+    </string-array>
+
+    <string name="number_prompt">인원 수</string>
+    <string-array name="numberList">
+        <item>2명</item>
+        <item>3명</item>
+        <item>4명</item>
+        <item>5명</item>
+    </string-array>
+</resources>

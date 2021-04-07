@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- 상단 타이틀 바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/mycolor"
+        >
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:background="#00000000"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="&lt;"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="ABOUT US"/>
+
+    </RelativeLayout>
+
+    <!-- 내용 컨텐츠 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dish"
+            />
+
+        <TextView
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Res was awarded “One to Watch Award” at the Asia’s 50 Best Restaurants Award, so-called Chef’s Oscars in 2017. It continued to 2018 and 2019; Chef Kim was listed as Asia’s 50 Best Restaurants both years. Also Toc Toc is listed in the Michelin Guide Seoul. \n \n Res suggests Masstige dining concept to public where anyone can satisfy one’s desire at more reasonable price and cozy place. "/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+

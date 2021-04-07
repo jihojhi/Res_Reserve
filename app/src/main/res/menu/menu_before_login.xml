@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/about_res"
+        android:icon="@drawable/round_favorite_white_18dp"
+        android:title="ABOUT"/>
+
+    <item
+        android:id="@+id/menu_res"
+        android:icon="@drawable/round_local_dining_white_18dp"
+        android:title="MENU"/>
+
+    <item
+        android:id="@+id/location_res"
+        android:icon="@drawable/round_room_white_18dp"
+        android:title="LOCATION"/>
+
+    <item
+        android:id="@+id/contact_res"
+        android:icon="@drawable/round_call_white_18dp"
+        android:title="CONTACT"/>
+
+</menu>

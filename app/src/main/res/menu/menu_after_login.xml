@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/announce_res"
+        android:icon="@drawable/round_announcement_white_18dp"
+        android:title="ANNOUNCE"/>
+
+    <item
+        android:id="@+id/reserve_res"
+        android:icon="@drawable/round_assignment_white_18dp"
+        android:title="RESERVE"/>
+
+    <item
+        android:id="@+id/mypage_res"
+        android:icon="@drawable/round_perm_identity_white_18dp"
+        android:title="MYPAGE"/>
+
+
+</menu>

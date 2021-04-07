@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <!-- 상단 타이틀 바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/mycolor"
+        >
+
+        <Button
+            android:id="@+id/backBtn_to_afterLoginMain"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:background="#00000000"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="&lt;"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="예약"/>
+
+    </RelativeLayout>
+
+    <!-- 내용 컨텐츠 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/step1"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:background="@drawable/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="원하시는 예약 날짜를 선택해주세요"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#3D3D3D"
+            android:layout_margin="15dp"/>
+
+        <CalendarView
+            android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/dateSelect"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/selectedDate"
+            android:background="@drawable/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예약일 : "
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#636363"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/goToNextSelect"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다음"
+            android:textColor="#FFFCFC"
+            android:background="@drawable/button"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/step2"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:background="@drawable/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="아래 정보를 선택해주세요"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#3D3D3D"
+                android:layout_margin="15dp"/>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약 시간"
+                    android:textSize="24sp"
+                    android:layout_centerHorizontal="true"/>
+
+                <Spinner
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:id="@+id/timeSelect"
+                    android:layout_below="@id/time"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp"
+                    android:background="@drawable/spinner_background"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:prompt="@string/timeList_prompt"/>
+
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/timeSelect"
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약 인원"
+                    android:textSize="24sp"
+                    android:layout_centerHorizontal="true"/>
+
+                <Spinner
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:id="@+id/numberSelect"
+                    android:layout_below="@id/number"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp"
+                    android:background="@drawable/spinner_background"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:prompt="@string/number_prompt"/>
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/numberSelect"
+                    android:id="@+id/askFor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="요청 사항"
+                    android:textSize="24sp"
+                    android:layout_centerHorizontal="true"/>
+
+                <EditText
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/fillOut"
+                    android:layout_below="@id/askFor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="100dp"
+                    android:background="@drawable/edit"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:hint="요청사항을 입력해주세요"
+                    android:layout_height="40dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/goToPrevious"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이전"
+                    android:textColor="#FFFCFC"
+                    android:background="@drawable/button"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/goToFinal"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="다음"
+                    android:textColor="#FFFCFC"
+                    android:background="@drawable/button"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/step3"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:background="@drawable/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="최종 내역을 확인해주세요"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#3D3D3D"
+                android:layout_margin="15dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="5"
+                android:layout_margin="40dp">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_width="150dp"
+                    android:text="예약 날짜"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30sp"
+                    />
+                <TextView
+                    android:id="@+id/finalDate"
+                    android:background="@drawable/textview"
+                    android:layout_height="40dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_width="180dp"
+                    android:text="날짜"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30sp"
+                    />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_width="150dp"
+                    android:text="예약 시간"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30sp"
+                    />
+                <TextView
+                    android:id="@+id/finalTime"
+                    android:background="@drawable/textview"
+                    android:layout_height="40dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_width="180dp"
+                    android:text="시간"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30sp"
+                    />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_width="150dp"
+                    android:text="예약 인원"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30sp"
+                    />
+                <TextView
+                    android:id="@+id/finalNumber"
+                    android:background="@drawable/textview"
+                    android:layout_height="40dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_width="180dp"
+                    android:text="인원"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30sp"
+                    />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:gravity="center"
+                    android:layout_width="330dp"
+                    android:text="요청 사항"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/finalAsk"
+                    android:background="@drawable/textview"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:layout_width="330dp"
+                    android:layout_height="40dp"
+                    android:text="요청"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    />
+
+            </GridLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/goToPrevious2"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이전"
+                    android:textColor="#FFFCFC"
+                    android:background="@drawable/button"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="취소"
+                    android:textColor="#FFFCFC"
+                    android:background="@drawable/button"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/confirm"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약"
+                    android:textColor="#FFFCFC"
+                    android:background="@drawable/button"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
+

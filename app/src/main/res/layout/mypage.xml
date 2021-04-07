@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <!-- 상단 타이틀 바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/mycolor"
+        >
+
+        <Button
+            android:id="@+id/backBtn_to_afterLoginMain"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:background="#00000000"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="&lt;"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="마이페이지"/>
+
+    </RelativeLayout>
+
+    <!-- 내용 컨텐츠 -->
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/round_perm_identity_white_18dp"
+            android:background="@drawable/profile"/>
+
+       <GridLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:rowCount="4"
+           android:columnCount="2"
+           android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:gravity="fill_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="홍길동님 :)"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#3A3A3A"
+                />
+
+           <TextView
+               android:textSize="20sp"
+               android:layout_row="1"
+               android:layout_column="0"
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:gravity="right"
+               android:paddingRight="20dp"
+               android:text="아  이  디"
+               />
+           <TextView
+               android:gravity=""
+               android:id="@+id/user_id"
+               android:textSize="20sp"
+               android:layout_marginTop="20dp"
+               android:layout_row="1"
+               android:layout_column="1"
+               android:paddingLeft="20dp"
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:text="jihojhi"
+               />
+           <TextView
+               android:layout_marginTop="5dp"
+               android:textSize="20sp"
+               android:layout_row="2"
+               android:layout_column="0"
+               android:gravity="right"
+               android:paddingRight="20dp"
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:text="전화번호"
+               />
+           <TextView
+               android:id="@+id/user_tel"
+               android:layout_marginTop="5dp"
+               android:textSize="20sp"
+               android:layout_row="2"
+               android:layout_column="1"
+               android:paddingLeft="20dp"
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:text="010-0000-0000"
+               />
+           <Button
+               android:id="@+id/checkReserve"
+               android:background="#00000000"
+               android:layout_marginTop="100dp"
+               android:layout_row="3"
+               android:layout_column="0"
+               android:gravity="center"
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               android:text="예약조회"
+               android:textColor="#F80052"
+               />
+           <Button
+               android:id="@+id/updateInformation"
+               android:background="#00000000"
+               android:layout_marginTop="100dp"
+               android:layout_row="3"
+               android:layout_column="1"
+               android:gravity="center"
+               android:layout_width="200dp"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               android:layout_height="wrap_content"
+               android:text="정보수정"
+               android:textColor="@color/mycolor"
+
+               />
+       </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center_horizontal">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:rowCount="5"
+            android:columnCount="3">
+
+            <TextView
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="이름"/>
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:hint="홍길동"/>
+
+
+
+            <TextView
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="아이디"/>
+
+            <EditText
+                android:id="@+id/userId"
+                android:enabled="false"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/edit"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:hint="hong1234"/>
+
+            <TextView
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="비밀번호"/>
+
+            <EditText
+                android:id="@+id/userPw"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/edit"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:hint="*****"/>
+
+            <TextView
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="일치확인"/>
+
+            <EditText
+                android:id="@+id/userPwChk"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/edit"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:inputType="textPassword"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:hint="*****"/>
+            <Button
+                android:id="@+id/pwChkBtn"
+                android:onClick="pwChk"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="확인"/>
+
+            <TextView
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="전화번호"/>
+
+            <EditText
+                android:id="@+id/userTel"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/edit"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:hint="010-0000-0000"/>
+
+            <Button
+                android:id="@+id/verifyBtn"
+                android:onClick="verifyT"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="인증"/>
+
+        </GridLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:textColor="@color/background"
+                android:background="@color/mycolor"
+                android:textSize="18sp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="50dp"
+                android:id="@+id/updateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:background="@color/mycolor"
+                android:textColor="@color/background"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/updateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center_horizontal">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:rowCount="5"
+            android:columnCount="2">
+
+            <TextView
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="예약날짜"/>
+
+            <EditText
+                android:id="@+id/r_date"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:hint="YYYY.MM.DD"/>
+
+
+
+            <TextView
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="예약시간"/>
+
+            <EditText
+                android:id="@+id/r_time"
+                android:enabled="false"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/edit"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:hint="TIME"/>
+
+            <TextView
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="예약인원"/>
+
+            <EditText
+                android:id="@+id/r_num"
+                android:enabled="false"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/edit"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:hint="NUMBER"/>
+
+            <TextView
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="요청사항"/>
+
+            <EditText
+                android:id="@+id/r_ask"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/edit"
+                android:layout_columnSpan="2"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:inputType="text"
+                android:enabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:hint="ASKFOR"/>
+
+        </GridLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/cancelReserve"
+                android:textColor="@color/background"
+                android:background="@color/mycolor"
+                android:textSize="18sp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약취소"/>
+
+            <Button
+                android:id="@+id/returnTo"
+                android:background="@color/mycolor"
+                android:textColor="@color/background"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/cancelReserve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="돌아가기"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

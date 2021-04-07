@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+<!-- 상단 타이틀 바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/mycolor"
+        >
+
+        <Button
+            android:id="@+id/backBtn_to_afterLoginMain"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:background="#00000000"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="&lt;"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textColor="@color/background"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="공지사항"/>
+
+    </RelativeLayout>
+
+    <!-- 내용 컨텐츠 : Relative Layout 으로 변경 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:id="@+id/list1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DFDFDF">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="연말연시 예약안내"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#FF5F5F"
+                android:gravity="left|center"
+                android:paddingLeft="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020.12.28"
+                android:textStyle="bold"
+                android:layout_alignBaseline="@id/title1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title1"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:padding="25dp"
+                android:text="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+                />
+
+        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/list2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="크리스마스 예약안내"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#2395F7"
+                    android:gravity="left|center"
+                    android:paddingLeft="30sp"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="2020.12.25"
+                     android:textStyle="bold"
+                     android:layout_alignBaseline="@id/title2"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="20dp"
+                     android:textSize="15sp"
+                     />
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="25dp"
+                    android:text="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+                    />
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/list3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DFDFDF">
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="예약관련 안내사항"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#525252"
+                android:gravity="left|center"
+                android:paddingLeft="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020.09.15"
+                android:textStyle="bold"
+                android:layout_alignBaseline="@id/title3"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/content3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title3"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:padding="25dp"
+                android:text="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
