@@ -2,8 +2,10 @@ package com.example.res_project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import com.kakao.sdk.common.util.Utility;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+
+        // Hash Key 값 구하기
+        String keyHash = Utility.INSTANCE.getKeyHash(this);
+        Log.d(keyHash, "test");
+
 
         websiteBtn = findViewById(R.id.websiteBtn);
         loginBtn = findViewById(R.id.loginBtn);

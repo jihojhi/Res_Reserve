@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.example.res_project"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -17,6 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    //자바 버전 설정
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Kotlin Complier 에서 수동으로 지정
+    /*kotlinOptions { jvmTarget = "1.8" }*/
+
+
 }
 
 dependencies {
@@ -25,6 +36,13 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    // 카카오 SDK 모듈 설정
+    implementation "com.kakao.sdk:v2-user:2.4.2"
+    implementation "com.kakao.sdk:v2-talk:2.4.2"
+    implementation "com.kakao.sdk:v2-link:2.4.2"
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
