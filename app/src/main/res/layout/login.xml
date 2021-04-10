@@ -96,7 +96,7 @@
             android:layout_below="@id/rl"
             android:layout_margin="20dp"
             android:id="@+id/loginCheckBtn"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#FFFCFC"
             android:background="@drawable/button"
             android:layout_width="match_parent"
@@ -107,14 +107,24 @@
             android:layout_below="@+id/loginCheckBtn"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#FFFCFC"
             android:background="@drawable/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="회원가입"/>
 
-
+        <Button
+            android:id="@+id/kakao"
+            android:layout_below="@+id/joinBtn"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/kakao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        
     </RelativeLayout>
 
 
