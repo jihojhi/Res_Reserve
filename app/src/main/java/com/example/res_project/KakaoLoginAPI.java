@@ -55,7 +55,7 @@ public class KakaoLoginAPI {
     }
 
 
-    // 토근 정보 보기
+    // 토큰 정보 보기
     public void tokenCheck() {
 
         uac.accessTokenInfo((accessTokenInfo, error) -> {
