@@ -13,4 +13,7 @@
         <item>4명</item>
         <item>5명</item>
     </string-array>
+
+    <string name="kakao_app_key">88dd4823263961476abf28f40f20df37</string>
+
 </resources>

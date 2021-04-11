@@ -1,21 +1,28 @@
 package com.example.res_project;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity_Login extends AppCompatActivity {
+@RequiresApi(api = Build.VERSION_CODES.R)
+public class MainActivity_Login extends AppCompatActivity{
 
-    Button backBtn, joinBtn, loginCheckBtn;
+    Button backBtn, joinBtn, loginCheckBtn, kakao;
     EditText insertedId, insertedPw;
     DBHelper mydb;
+    KakaoLoginAPI kakaoAPI = new KakaoLoginAPI();
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,6 +30,20 @@ public class MainActivity_Login extends AppCompatActivity {
         setContentView(R.layout.login);
 
         mydb = new DBHelper(this);
+
+        // 카카오톡 로그인 버튼
+        kakao = findViewById(R.id.kakao);
+
+        // 카카오톡 로그인 버튼 이벤트
+        kakao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                kakaoAPI.kakaoLogin(getApplicationContext());
+                kakaoAPI.tokenCheck();
+                kakaoAPI.userInfoRequest();
+            }
+        });
+
 
         backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {

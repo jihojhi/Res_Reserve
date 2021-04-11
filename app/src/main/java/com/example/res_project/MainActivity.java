@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.kakao.sdk.common.KakaoSdk;
 import com.kakao.sdk.common.util.Utility;
 
 import androidx.annotation.Nullable;
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        // 카카오 SDK 초기화
+        KakaoSdk.init(this, getString(R.string.kakao_app_key));
 
         // Hash Key 값 구하기
         String keyHash = Utility.INSTANCE.getKeyHash(this);

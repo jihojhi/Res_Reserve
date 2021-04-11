@@ -21,6 +21,20 @@
             </intent-filter>
         </activity>
 
+        <!-- Redirext URI 설정 -->
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao88dd4823263961476abf28f40f20df37" />
+
+            </intent-filter>
+        </activity>
+
         <activity android:name=".MainActivity"/>
 
         <activity android:name=".MainActivity_Menu_before_login"/>
