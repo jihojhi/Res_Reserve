@@ -10,7 +10,7 @@
 
 ## RES 개발 과정 
 
-[다운로드 (PDF파일)](https://github.com/jihojhi/Res_Android/blob/master/docs/ResApp_hj.pdf)
+[보러가기 (PDF)](https://github.com/jihojhi/Res_Android/blob/master/docs/ResApp_hj.pdf)
 
 <br>
 
