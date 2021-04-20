@@ -38,7 +38,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:paddingTop="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:text="E-MAIL"/>
 
             <Button
                 android:id="@+id/email"
@@ -48,9 +58,18 @@
                 android:textAlignment="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="EMAIL  |  res_korea@res.com"
+                android:text="res_korea@res.com"
+                android:paddingBottom="40dp"
                 />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:text="TEL"/>
             <Button
                 android:id="@+id/dial"
                 android:layout_margin="20dp"
@@ -59,7 +78,7 @@
                 android:textAlignment="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TEL  |  +82 2-123-1234"
+                android:text="+82 2-123-1234"
                 />
 
     </LinearLayout>
